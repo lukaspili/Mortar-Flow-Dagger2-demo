@@ -1,6 +1,6 @@
 # Mortar Demo
 
-Demo project for Mortar / Flow / Dagger2
+Demo project for Mortar / Flow / Dagger2.
 
 
 ## Showcase
@@ -19,3 +19,13 @@ Demo project for Mortar / Flow / Dagger2
 - ViewPager
 - GoogleMap
 - onActivityResult from external activity
+
+
+## Author
+
+- Lukasz Piliszczuk ([@lukaspili](https://twitter.com/lukaspili))
+
+
+## License
+
+Mortar demo is released under the MIT license. See the LICENSE file for details.
