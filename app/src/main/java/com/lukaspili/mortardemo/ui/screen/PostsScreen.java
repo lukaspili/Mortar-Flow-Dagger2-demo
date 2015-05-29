@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import com.lukaspili.mortardemo.R;
 import com.lukaspili.mortardemo.app.DaggerScope;
-import com.lukaspili.mortardemo.app.GlobalComponent;
+import com.lukaspili.mortardemo.app.AppDependencies;
 import com.lukaspili.mortardemo.app.adapter.PostAdapter;
 import com.lukaspili.mortardemo.flow.Layout;
 import com.lukaspili.mortardemo.model.Post;
@@ -42,7 +42,7 @@ public class PostsScreen extends Path implements ScreenComponentFactory<RootActi
 
     @dagger.Component(dependencies = RootActivity.Component.class)
     @DaggerScope(Component.class)
-    public interface Component extends GlobalComponent {
+    public interface Component extends AppDependencies {
         void inject(PostsView view);
     }
 

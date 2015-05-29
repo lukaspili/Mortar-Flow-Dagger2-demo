@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.lukaspili.mortardemo.R;
 import com.lukaspili.mortardemo.app.DaggerScope;
-import com.lukaspili.mortardemo.app.GlobalComponent;
+import com.lukaspili.mortardemo.app.AppDependencies;
 import com.lukaspili.mortardemo.flow.Layout;
 import com.lukaspili.mortardemo.model.Post;
 import com.lukaspili.mortardemo.mortar.ScreenComponentFactory;
@@ -39,7 +39,7 @@ public class ViewPostScreen extends Path implements ScreenComponentFactory<RootA
 
     @dagger.Component(dependencies = RootActivity.Component.class, modules = Module.class)
     @DaggerScope(Component.class)
-    public interface Component extends GlobalComponent {
+    public interface Component extends AppDependencies {
         void inject(ViewPostView view);
         void inject(BannerView view);
     }

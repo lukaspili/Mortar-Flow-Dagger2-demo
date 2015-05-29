@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import com.lukaspili.mortardemo.R;
 import com.lukaspili.mortardemo.app.DaggerScope;
 import com.lukaspili.mortardemo.app.DaggerService;
-import com.lukaspili.mortardemo.app.GlobalComponent;
+import com.lukaspili.mortardemo.app.AppDependencies;
 import com.lukaspili.mortardemo.app.MortarDemoApp;
 import com.lukaspili.mortardemo.flow.GsonParceler;
 import com.lukaspili.mortardemo.flow.HandlesBack;
@@ -164,7 +164,7 @@ public class RootActivity extends Activity implements Flow.Dispatcher {
 
     @dagger.Component(dependencies = MortarDemoApp.Component.class)
     @DaggerScope(Component.class)
-    public interface Component extends GlobalComponent {
+    public interface Component extends AppDependencies {
         void inject(RootActivity activity);
     }
 }

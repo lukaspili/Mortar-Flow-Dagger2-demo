@@ -1,7 +1,7 @@
 package com.lukaspili.mortardemo.ui.screen;
 
 import com.lukaspili.mortardemo.app.DaggerScope;
-import com.lukaspili.mortardemo.app.GlobalComponent;
+import com.lukaspili.mortardemo.app.AppDependencies;
 import com.lukaspili.mortardemo.mortar.ScreenComponentFactory;
 import com.lukaspili.mortardemo.rest.RestClient;
 import com.lukaspili.mortardemo.ui.view.LoginView;
@@ -28,7 +28,7 @@ public class LoginScreen extends Path implements ScreenComponentFactory<PostsScr
 
     @dagger.Component(dependencies = PostsScreen.Component.class)
     @DaggerScope(Component.class)
-    public interface Component extends GlobalComponent {
+    public interface Component extends AppDependencies {
         void inject(LoginView view);
     }
 

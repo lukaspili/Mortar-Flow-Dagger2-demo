@@ -16,7 +16,6 @@ public class MortarDemoApp extends Application {
 
     @Override
     public Object getSystemService(String name) {
-        Timber.d("TEST");
         return mortarScope.hasService(name) ? mortarScope.getService(name) : super.getSystemService(name);
     }
 
@@ -38,7 +37,7 @@ public class MortarDemoApp extends Application {
 
     @dagger.Component
     @DaggerScope(Component.class)
-    public interface Component extends GlobalComponent {
+    public interface Component extends AppDependencies {
         void inject(MortarDemoApp app);
     }
 }
