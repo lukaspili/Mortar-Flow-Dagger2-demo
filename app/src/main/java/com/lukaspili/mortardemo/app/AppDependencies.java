@@ -3,7 +3,7 @@ package com.lukaspili.mortardemo.app;
 import com.lukaspili.mortardemo.rest.RestClient;
 
 /**
- * Expose "singletons" dependencies
+ * Exposes app dependencies
  *
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
  */
