@@ -9,9 +9,9 @@ Demo project for Mortar / Flow / Dagger2.
 - Flow
 - Dagger2
 - Screen (with Flow-path)
-- ScreenScoper : `ScreenScoper`
-- Subscreen (screen that is included in another screen) : `LoginScreen`
-- Additional custom view injected to screen : `BannerView`
+- ScreenScoper : see `ScreenScoper`
+- Subscreen (screen that is included in another screen) : see `PostsSubScreen`
+- Additional custom view injected to screen : see `BannerView`
 
 
 ## Todo
@@ -19,6 +19,12 @@ Demo project for Mortar / Flow / Dagger2.
 - ViewPager
 - GoogleMap
 - onActivityResult from external activity
+
+
+## Power demo
+
+Too much boilerplate for your taste? You may want to check-out the same demo with less of it:  
+[https://github.com/lukaspili/power-Mortar-Flow-Dagger2-demo](https://github.com/lukaspili/power-Mortar-Flow-Dagger2-demo)
 
 
 ## Author

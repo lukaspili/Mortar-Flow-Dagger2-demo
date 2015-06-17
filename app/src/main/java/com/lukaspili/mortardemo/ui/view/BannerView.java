@@ -15,6 +15,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
+ * Additional custom view showed within ViewPost view
+ *
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
  */
 public class BannerView extends LinearLayout {
@@ -27,7 +29,7 @@ public class BannerView extends LinearLayout {
 
         ViewPostScreen.Component component = DaggerService.getDaggerComponent(context);
         component.inject(this);
-//
+
         View view = View.inflate(context, R.layout.view_banner, this);
         ButterKnife.inject(view);
     }

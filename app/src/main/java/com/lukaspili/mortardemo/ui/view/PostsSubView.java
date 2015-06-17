@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 
 import com.lukaspili.mortardemo.app.DaggerService;
 import com.lukaspili.mortardemo.mortar.ScreenScoper;
-import com.lukaspili.mortardemo.ui.screen.LoginScreen;
+import com.lukaspili.mortardemo.ui.screen.PostsSubScreen;
 
 import javax.inject.Inject;
 
@@ -17,16 +17,16 @@ import mortar.MortarScope;
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
  */
-public class LoginView extends FrameLayout {
+public class PostsSubView extends FrameLayout {
 
     @Inject
-    protected LoginScreen.Presenter presenter;
+    protected PostsSubScreen.Presenter presenter;
 
-    public LoginView(Context context, AttributeSet attrs) {
+    public PostsSubView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         // 1. Create screen
-        LoginScreen screen = new LoginScreen();
+        PostsSubScreen screen = new PostsSubScreen();
 
         // 2. Create screen scoper
         ScreenScoper screenScoper = new ScreenScoper();
@@ -39,12 +39,12 @@ public class LoginView extends FrameLayout {
         Context loginContext = scope.createContext(context);
 
         // 5. Inject
-        DaggerService.<LoginScreen.Component>getDaggerComponent(loginContext).inject(this);
+        DaggerService.<PostsSubScreen.Component>getDaggerComponent(loginContext).inject(this);
 
 
         // OPTION 2
         // 4. Get component from mortar scope
-        LoginScreen.Component component = scope.getService(DaggerService.SERVICE_NAME);
+        PostsSubScreen.Component component = scope.getService(DaggerService.SERVICE_NAME);
 
         // 5. Inject
         component.inject(this);
@@ -67,6 +67,7 @@ public class LoginView extends FrameLayout {
 
     @Override
     protected void onFinishInflate() {
+        super.onFinishInflate();
         ButterKnife.inject(this);
     }
 
