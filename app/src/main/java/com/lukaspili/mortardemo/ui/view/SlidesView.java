@@ -1,13 +1,13 @@
 package com.lukaspili.mortardemo.ui.view;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.lukaspili.mortardemo.R;
 import com.lukaspili.mortardemo.app.DaggerService;
-import com.lukaspili.mortardemo.ui.screen.ViewPostScreen;
+import com.lukaspili.mortardemo.ui.screen.SlidesScreen;
 
 import javax.inject.Inject;
 
@@ -17,20 +17,17 @@ import butterknife.InjectView;
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
  */
-public class ViewPostView extends LinearLayout {
+public class SlidesView extends LinearLayout {
 
     @Inject
-    protected ViewPostScreen.Presenter presenter;
+    protected SlidesScreen.Presenter presenter;
 
-    @InjectView(R.id.title)
-    public TextView titleTextView;
+    @InjectView(R.id.pager)
+    public ViewPager viewPager;
 
-    @InjectView(R.id.content)
-    public TextView contentTextView;
-
-    public ViewPostView(Context context, AttributeSet attrs) {
+    public SlidesView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        DaggerService.<ViewPostScreen.Component>getDaggerComponent(context).inject(this);
+        DaggerService.<SlidesScreen.Component>getDaggerComponent(context).inject(this);
     }
 
     @Override

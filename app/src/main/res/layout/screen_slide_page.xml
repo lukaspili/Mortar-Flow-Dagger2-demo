@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.lukaspili.mortardemo.ui.view.PostsSubView
+<com.lukaspili.mortardemo.ui.view.SlidePageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/page_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Posts sub screen. Click to go to Slides screen."
         android:textColor="@android:color/white"/>
 
-</com.lukaspili.mortardemo.ui.view.PostsSubView>
+</com.lukaspili.mortardemo.ui.view.SlidePageView>

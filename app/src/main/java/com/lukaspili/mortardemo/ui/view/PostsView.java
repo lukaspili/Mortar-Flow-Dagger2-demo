@@ -53,6 +53,7 @@ public class PostsView extends LinearLayout {
 
     @Override
     protected void onFinishInflate() {
+        super.onFinishInflate();
         ButterKnife.inject(this);
     }
 }

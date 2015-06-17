@@ -8,9 +8,9 @@ import com.lukaspili.mortardemo.ui.view.PostsSubView;
 
 import javax.inject.Inject;
 
+import flow.Flow;
 import flow.path.Path;
 import mortar.ViewPresenter;
-import timber.log.Timber;
 
 /**
  * Will be included as "subscreen" in Posts screen
@@ -21,7 +21,7 @@ public class PostsSubScreen extends Path implements ScreenComponentFactory<Posts
 
     @Override
     public Object createComponent(PostsScreen.Component parent) {
-        return DaggerLoginScreen_Component.builder()
+        return DaggerPostsSubScreen_Component.builder()
                 .component(parent)
                 .build();
     }
@@ -43,8 +43,7 @@ public class PostsSubScreen extends Path implements ScreenComponentFactory<Posts
         }
 
         public void click() {
-            Timber.d("Posts Sub clicked!");
-            // do some stuff with rest client to login
+            Flow.get(getView()).set(new SlidesScreen());
         }
     }
 }

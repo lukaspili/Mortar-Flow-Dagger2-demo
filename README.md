@@ -12,11 +12,11 @@ Demo project for Mortar / Flow / Dagger2.
 - ScreenScoper : see `ScreenScoper`
 - Subscreen (screen that is included in another screen) : see `PostsSubScreen`
 - Additional custom view injected to screen : see `BannerView`
+- ViewPager: see `SlidesScreen`, `SlidePageScreen` and `SlidePagerAdapter`
 
 
 ## Todo
 
-- ViewPager
 - GoogleMap
 - onActivityResult from external activity
 

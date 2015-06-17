@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.lukaspili.mortardemo.R;
 import com.lukaspili.mortardemo.app.DaggerService;
-import com.lukaspili.mortardemo.ui.screen.ViewPostScreen;
+import com.lukaspili.mortardemo.ui.screen.SlidePageScreen;
 
 import javax.inject.Inject;
 
@@ -17,20 +17,17 @@ import butterknife.InjectView;
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
  */
-public class ViewPostView extends LinearLayout {
+public class SlidePageView extends LinearLayout {
 
     @Inject
-    protected ViewPostScreen.Presenter presenter;
+    protected SlidePageScreen.Presenter presenter;
 
-    @InjectView(R.id.title)
-    public TextView titleTextView;
+    @InjectView(R.id.page_title)
+    public TextView textView;
 
-    @InjectView(R.id.content)
-    public TextView contentTextView;
-
-    public ViewPostView(Context context, AttributeSet attrs) {
+    public SlidePageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        DaggerService.<ViewPostScreen.Component>getDaggerComponent(context).inject(this);
+        DaggerService.<SlidePageScreen.Component>getDaggerComponent(context).inject(this);
     }
 
     @Override

@@ -22,8 +22,8 @@ public class PostsSubView extends FrameLayout {
     @Inject
     protected PostsSubScreen.Presenter presenter;
 
-    public PostsSubView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public PostsSubView(Context parentContext, AttributeSet attrs) {
+        super(parentContext, attrs);
 
         // 1. Create screen
         PostsSubScreen screen = new PostsSubScreen();
@@ -32,14 +32,14 @@ public class PostsSubView extends FrameLayout {
         ScreenScoper screenScoper = new ScreenScoper();
 
         // 3. Create scope
-        MortarScope scope = screenScoper.getScreenScope(context, screen.getClass().getName(), screen);
+        MortarScope scope = screenScoper.getScreenScope(parentContext, screen.getClass().getName(), screen);
 
         // OPTION 1
         // 4. Create child context wrapped with Mortar
-        Context loginContext = scope.createContext(context);
+        Context context = scope.createContext(parentContext);
 
         // 5. Inject
-        DaggerService.<PostsSubScreen.Component>getDaggerComponent(loginContext).inject(this);
+        DaggerService.<PostsSubScreen.Component>getDaggerComponent(context).inject(this);
 
 
         // OPTION 2
