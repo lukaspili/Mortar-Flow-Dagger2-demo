@@ -1,5 +1,7 @@
 # Mortar Demo
 
+[![Join the chat at https://gitter.im/lukaspili/Mortar-Flow-Dagger2-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lukaspili/Mortar-Flow-Dagger2-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Demo project for Mortar / Flow / Dagger2.
 
 
